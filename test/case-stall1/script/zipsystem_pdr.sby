@@ -1,0 +1,89 @@
+[options]
+mode prove
+depth 128
+
+[engines]
+abc pdr
+
+[script]
+read -sv cpudefs.v
+#
+read -sv axiicache.v
+read -sv cpuops.v
+read -sv dblfetch.v
+read -sv dcache.v
+read -sv div.v
+read -sv idecode.v
+read -sv iscachable.v
+read -sv memops.v
+read -sv mpyop.v
+read -sv pfcache.v
+read -sv pipefetch.v
+read -sv pipemem.v
+read -sv prefetch.v
+read -sv slowmpy.v
+read -sv zipcpu.v
+#
+read -sv wbpriarbiter.v
+read -sv busdelay.v
+read -sv f_idecode.v
+read -sv fwb_counter.v
+read -sv fwb_master.v
+read -sv fwb_slave.v
+read -sv wbarbiter.v
+read -sv wbdblpriarb.v
+#
+read -sv wbdmac.v
+read -sv icontrol.v
+read -sv wbwatchdog.v
+read -sv zipjiffies.v
+read -sv zipmmu.v
+read -sv ziptimer.v
+#
+read -sv abs_div.v
+read -sv abs_mpy.v
+read -sv abs_prefetch.v
+#
+read -sv zipcounter.v
+read -formal zipsystem.v
+
+hierarchy -top zipsystem
+prep -top zipsystem
+
+[files]
+rtl/abs_div.v
+rtl/abs_mpy.v
+rtl/abs_prefetch.v
+rtl/axiicache.v
+rtl/busdelay.v
+rtl/cpudefs.v
+rtl/cpuops.v
+rtl/dblfetch.v
+rtl/dcache.v
+rtl/div.v
+rtl/f_idecode.v
+rtl/fwb_counter.v
+rtl/fwb_master.v
+rtl/fwb_slave.v
+rtl/icontrol.v
+rtl/idecode.v
+rtl/iscachable.v
+rtl/memops.v
+rtl/mpyop.v
+rtl/pfcache.v
+rtl/pipefetch.v
+rtl/pipemem.v
+rtl/prefetch.v
+rtl/slowmpy.v
+rtl/wbarbiter.v
+rtl/wbdblpriarb.v
+rtl/wbdmac.v
+rtl/wbpriarbiter.v
+rtl/wbwatchdog.v
+rtl/zipcounter.v
+rtl/zipcpu.v
+rtl/zipjiffies.v
+rtl/zipmmu.v
+rtl/zipsystem.v
+rtl/ziptimer.v
+

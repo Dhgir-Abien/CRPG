@@ -1,0 +1,15 @@
+[options]
+mode bmc
+depth 1024
+
+[engines]
+smtbmc boolector
+
+[script]
+read -sv cle.v
+
+hierarchy -top cle
+prep -top cle
+
+[files]
+rtl/cle.v

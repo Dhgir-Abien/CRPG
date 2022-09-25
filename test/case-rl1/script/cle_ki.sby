@@ -1,0 +1,15 @@
+[options]
+mode prove
+depth 1024
+
+[engines]
+smtbmc yices
+
+[script]
+read -sv cle.v
+
+hierarchy -top cle
+prep -top cle
+
+[files]
+rtl/cle.v

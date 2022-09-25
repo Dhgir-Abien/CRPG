@@ -1,0 +1,20 @@
+read -sv rtl/cle.v
+
+hierarchy -top cle
+prep -top cle
+
+#
+#setattr -set fsm_encoding "auto" dcache
+proc_clean
+proc_init
+proc_arst
+proc_mux
+proc_dff
+proc_clean
+#
+fsm_detect
+fsm_extract
+fsm_info
+#
+proc
+write_json build/design_under_test.json

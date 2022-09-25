@@ -1,0 +1,59 @@
+read -sv rtl/cpudefs.v
+#
+read -sv rtl/axiicache.v
+read -sv rtl/cpuops.v
+read -sv rtl/dblfetch.v
+read -sv rtl/dcache.v
+read -sv rtl/div.v
+read -sv rtl/idecode.v
+read -sv rtl/iscachable.v
+read -sv rtl/memops.v
+read -sv rtl/mpyop.v
+read -sv rtl/pfcache.v
+read -sv rtl/pipefetch.v
+read -sv rtl/pipemem.v
+read -sv rtl/prefetch.v
+read -sv rtl/slowmpy.v
+read -sv rtl/zipcpu.v
+#
+read -sv rtl/wbpriarbiter.v
+read -sv rtl/busdelay.v
+read -sv rtl/f_idecode.v
+read -sv rtl/fwb_counter.v
+read -sv rtl/fwb_master.v
+read -sv rtl/fwb_slave.v
+read -sv rtl/wbarbiter.v
+read -sv rtl/wbdblpriarb.v
+#
+read -sv rtl/wbdmac.v
+read -sv rtl/icontrol.v
+read -sv rtl/wbwatchdog.v
+read -sv rtl/zipjiffies.v
+read -sv rtl/zipmmu.v
+read -sv rtl/ziptimer.v
+#
+read -sv rtl/abs_div.v
+read -sv rtl/abs_mpy.v
+read -sv rtl/abs_prefetch.v
+#
+read -sv rtl/zipcounter.v
+read -sv rtl/zipsystem.v
+
+hierarchy -top zipsystem
+prep -top zipsystem
+
+#
+#setattr -set fsm_encoding "auto" dcache
+proc_clean
+proc_init
+proc_arst
+proc_mux
+proc_dff
+proc_clean
+#
+fsm_detect
+fsm_extract
+fsm_info
+#
+proc
+write_json build/design_under_test.json
