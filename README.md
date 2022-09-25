@@ -22,12 +22,13 @@ If you want to run the testcase, you will need:
 - [Verilator](https://verilator.org/guide/latest/install.html) 4.2 or later
 - [Yosys](https://github.com/YosysHQ/yosys#installation) 0.2 or later
 - [Symbiyosys](https://yosyshq.readthedocs.io/projects/sby/en/latest/install.html#installing-from-source)
-- [Boolector]([https://boolector.github.io](https://boolector.github.io/))
+- [Boolector](https://boolector.github.io)
 - [Yices2](https://github.com/SRI-CSL/yices2)
 
 ## Getting Started
 
 1. Run CRPG on testcase ack1
+
    `make case-ack1`
 
 2. Run BMC on testcase ack1
@@ -35,9 +36,11 @@ If you want to run the testcase, you will need:
    `cd test/case-ack1; make bmc` 
 
 3. Run K-Induction on testcase ack1
+
    `cd test/case-ack1; make ki` 
 
 4. Run PDR on testcase ack1
+
    `cd test/case-ack1; make pdr` 
 
    
