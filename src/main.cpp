@@ -13,7 +13,7 @@
 #include "transition.hpp"
 #include "analyzer.hpp"
 
-#define PURE_RANDOM true
+#define PURE_RANDOM false
 #define MCTS true
 
 using namespace std;
