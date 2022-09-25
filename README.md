@@ -11,7 +11,7 @@ With the rapid growth in the scale and complexity of integrated circuits, functi
 
 However, its high throughput and uniform distribution in probability make the generated patterns unplanned and purposeless. The simulator can only explore by random walk in the design state space. 
 
-CPRG is a constrained random pattern generator written in C++, running on the fastest SystemVerilog simulation platform [Verilator](https://www.veripool.org/verilator/). It proposes a design abstraction technique to provide an abstract model of the DUV and counterexamples, combined with refinement techniques to systematically supplement it with the necessary details related to verification goals. This "big picture" model guides the generator to produce more purposeful patterns.
+CPRG is a constrained random pattern generator written in C++, running on the fastest SystemVerilog simulation platform [Verilator](https://www.veripool.org/verilator/). CRPG proposes a design abstraction technique to provide an abstract model of the DUV and counterexamples, combined with refinement techniques to systematically supplement it with the necessary details related to verification goals. This "big picture" model guides the generator to produce more purposeful patterns.
 
 ## Installation
 
